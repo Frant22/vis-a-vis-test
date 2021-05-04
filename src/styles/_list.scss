@@ -1,0 +1,24 @@
+.list {
+  padding-left: 15.6rem;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 12rem;
+    text-align: start;
+    padding-bottom: 3.1rem;
+
+    &::before {
+      content: url('../images/list-style-round.png');
+      width: 3.4rem;
+      height: 3.4rem;
+
+      position: absolute;
+      left: -6rem;
+      top: -0.5rem;
+    }
+  }
+}

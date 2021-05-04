@@ -1,0 +1,66 @@
+.firstsection {
+  background-color: $section-background-color;
+  position: relative;
+
+  &__heading {
+    position: relative;
+    padding: 18rem 0 18.4rem 8rem;
+
+    color: $text-color;
+    opacity: 0.8;
+    font-size: 11.25rem;
+    font-weight: 700;
+    line-height: 10rem;
+
+    width: 54rem;
+
+    z-index: 1;
+  }
+
+  &__image {
+    background: url('../images/firstsection-image.png') no-repeat center;
+    width: 108rem;
+    height: 44rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    padding-bottom: 9rem;
+  }
+
+  &__description {
+    width: 30.6rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $text-color;
+
+    padding-bottom: 1.25rem;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    color: $text-color;
+    line-height: 1.6;
+
+    padding-bottom: 6rem;
+  }
+
+  &__decoration {
+    background: url('../images/decoration-image-1.png');
+    width: 30.6rem;
+    height: 42.5rem;
+
+    position: absolute;
+    right: 0;
+    top: -7rem;
+  }
+}

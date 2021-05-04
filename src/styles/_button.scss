@@ -1,0 +1,21 @@
+.button {
+  color: $text-color-white;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  background-color: $button-color;
+
+  width: 18rem;
+  height: 3.1rem;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition-duration: $transition-duration;
+
+  &:hover {
+    color: $button-color;
+    background-color: $text-color-white;
+    border: 1px solid $button-color;
+  }
+}
