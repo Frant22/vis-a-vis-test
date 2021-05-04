@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-template",
+  "name": "vis-a-vis",
   "version": "1.0.0",
-  "description": "Template for vanilla projects (no framework)",
+  "description": "landing for vis-a-vis test task",
   "main": ".src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,14 +33,18 @@
   },
   "homepage": "https://github.com/Frant22/vanilla-template#readme",
   "devDependencies": {
+    "@linthtml/linthtml": "^0.3.2",
     "concurrently": "^6.0.2",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "husky": "^6.0.0",
     "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12",
     "stylelint": "^13.12.0",
     "stylelint-config-sass-guidelines": "^8.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bemlint": "^1.7.0"
+  }
 }
