@@ -26,76 +26,76 @@ const corousel = new Vue({
     },
   },
   components: { VueSlickCarousel },
-  template: `<VueSlickCarousel v-bind="settings" @init="onInitCarousel">
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+  template: `<VueSlickCarousel v-bind="settings">
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
 
-              <div class="carousel__box">
-                <h3>{{ box.title }}</h3>
-                <ul class="carousel__list">
-                  <li>{{ box.description.firstText }}</li>
-                  <li>{{ box.description.secondText }}</li>
-                  <li>{{ box.description.thirdText }}</li>
+              <div class="box">
+                <h3 class="box__heading">{{ box.title }}</h3>
+                <ul class="box__list">
+                  <li class="box__element">{{ box.description.firstText }}</li>
+                  <li class="box__element">{{ box.description.secondText }}</li>
+                  <li class="box__element">{{ box.description.thirdText }}</li>
                 </ul>
               </div>
             </VueSlickCarousel>`,

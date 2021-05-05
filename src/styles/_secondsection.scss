@@ -1,3 +1,17 @@
 .secondsection {
   height: 500px;
+
+  &__top {
+    display: flex;
+    gap: 7.25rem;
+    padding-top: 15rem;
+  }
+
+  &__heading {
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: $text-color;
+
+    padding-top: 4.5rem;
+  }
 }
