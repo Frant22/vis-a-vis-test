@@ -4,3 +4,11 @@ $section-background-color: #f9f9f9;
 $button-color: #0093e6;
 
 $transition-duration: 0.5s;
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.corousel {
+  height: 200px;
+}

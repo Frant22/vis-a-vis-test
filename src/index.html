@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styles/main.scss"><link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <title>Vis-a-vis landing</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
           <a href="#" class="link nav__item">Lorem</a>
         </li>
         <li>
-          <a href="#" class=" link nav__item">Ipsum</a>
+          <a href="#" class="link nav__item">Ipsum</a>
         </li>
         <li>
           <a href="#" class="link nav__item">Simply</a>
@@ -68,6 +67,11 @@
           <div class="firstsection__decoration"></div>
         </div>
       </section>
+
+      <section class="section secondsection" v-bind="settings">
+        <div id="corousel" class="corousel"></div>
+      </section>
     </main>
+    <script src="main.js" defer></script>
   </body>
 </html>

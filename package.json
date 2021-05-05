@@ -45,6 +45,7 @@
     "stylelint-config-sass-guidelines": "^8.0.0"
   },
   "dependencies": {
-    "bemlint": "^1.7.0"
+    "bemlint": "^1.7.0",
+    "vue-slick-carousel": "^1.0.6"
   }
 }
