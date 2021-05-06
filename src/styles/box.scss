@@ -1,8 +1,11 @@
 .slick-slider {
-  width: 74rem;
+  width: 71.25rem;
 
   .box {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    background-color: white;
+    // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+    
     border-radius: 20px;
 
     width: 22.5rem !important;
@@ -51,8 +54,8 @@
         font-weight: bold;
         display: inline-block;
         position: absolute;
-        left: -1.5rem;
-
+        left: -2rem;
+        top: -0.3rem;
       }
     }
   }
@@ -60,12 +63,14 @@
   button.slick-arrow{
     content: '';
     background: url('../images/arrow.png') no-repeat center;
+    background-color: white;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 10px;
   }
 
   .slick-prev {
+    top: 16rem;
     left: -4rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
@@ -75,6 +80,7 @@
   }
 
   .slick-next {
+    top: 14.3rem;
     right: -4rem;
     transform: rotate(180deg);
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.06);
@@ -83,4 +89,8 @@
       content: '';
     }
   }
+}
+
+.slick-dots {
+  bottom: -3rem !important;
 }

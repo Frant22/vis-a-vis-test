@@ -1,0 +1,47 @@
+.bottom {
+  width: 38rem;
+  float: right;
+
+  padding-top: 8rem;
+
+  &__heading {
+    font-size: 1.8rem;
+    color: $text-color;
+    font-weight: 700;
+
+    width: 23rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    padding-bottom: 4.1rem;
+    width: 27rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 12rem);
+
+    padding-left: 2rem;
+  }
+
+  &__row {
+    position: relative;
+    padding-bottom: 1.5rem;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    &::before {
+      content: '•';
+      font-size: 2rem;
+      color: #0093e6;
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      left: -2rem;
+      top: -0.3rem;
+    }
+  }
+}
