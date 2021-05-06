@@ -1,0 +1,96 @@
+.card {
+  position: relative;
+  width: 22rem;
+  padding: 8rem 0;
+
+  &:first-child {
+    &::before {
+      content: '';
+      background: url('../images/grey-round.svg') no-repeat center;
+      background-size: contain;
+      width: 4.4rem;
+      height: 4.4rem;
+      position: absolute;
+      left: 0.8rem;
+      top: 0.85rem;
+    }
+
+    &::after {
+      content: '';
+      background: url('../images/rotation.svg') no-repeat center;
+      background-size: contain;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      left: -1rem;
+      top: -1rem;
+
+      animation: rotation 3s infinite linear;
+    }
+  }
+
+  @for $i from 2 through 6 {
+    &:nth-child(#{$i}) {
+      &::before {
+        content: '';
+        background: url('../images/grey-round.svg') no-repeat center;
+        background-size: contain;
+        width: 6.25rem;
+        height: 6.25rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+    color: $text-color;
+    font-weight: 700;
+
+    padding-bottom: 1.25rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $text-color;
+
+    padding-bottom: 1.25rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 1.5rem;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: $text-color;
+
+    &::before {
+      content: '•';
+      font-size: 1.5rem;
+      color: #0093e6;
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      left: -1.5rem;
+      top: 0;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

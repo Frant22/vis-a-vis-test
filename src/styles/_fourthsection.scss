@@ -1,0 +1,46 @@
+.fourthsection {
+  position: relative;
+  background-color: $section-background-color;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+
+    padding: 13rem 0 10rem 10rem;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: -8.75rem;
+    right: 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 17.5rem;
+    width: 100rem;
+    border-radius: 30px 0 0 30px;
+
+    background-color: $button-color;
+  }
+
+  &__item {
+    position: relative;
+    color: $text-color-white;
+    font-size: 2rem;
+    font-weight: 400;
+    width: 12rem;
+
+    &::before {
+      content: '';
+      background: url('../images/blue-round.svg') no-repeat center;
+      background-size: contain;
+      width: 6.25rem;
+      height: 6.25rem;
+      position: absolute;
+      left: -8rem;
+      top: -1rem;
+    }
+  }
+}
