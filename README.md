@@ -1,2 +1,1 @@
-# vanilla-template
-Template for vanilla projects (no framework)
+[DEMO](https://frant22.github.io/vis-a-vis-test/)
