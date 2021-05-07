@@ -1,0 +1,23 @@
+.footer {
+  padding: 7rem 22rem 7rem 12rem;
+  background-color: #333333;
+  display: flex;
+
+  &__label {
+    background: url('../images/label.svg') no-repeat center;
+    width: 8.5rem;
+    height: 1rem;
+  }
+
+  &__lists {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 1.5rem;
+    color: white;
+
+    margin-bottom: 2.25rem;
+    cursor: pointer;
+  }
+}

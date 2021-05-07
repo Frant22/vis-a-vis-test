@@ -1,0 +1,19 @@
+.error {
+  position: relative;
+  font-size: 0.8rem;
+  color: $text-color;
+  visibility: visible;
+
+  padding: 0.5rem 0 3rem;
+
+  &::before {
+    content: '＊';
+    color: $button-color;
+    font-size: 1rem;
+  }
+
+  &__invisible {
+    visibility: hidden;
+    padding: 0.5rem 0 3rem;
+  }
+}

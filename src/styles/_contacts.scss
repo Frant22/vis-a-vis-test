@@ -1,0 +1,24 @@
+.contacts {
+  padding-right: 5rem;
+
+  &__heading {
+    font-size: 1.8rem;
+    color: $text-color;
+    font-weight: 700;
+
+    padding-bottom: 2.6rem;
+  }
+
+  &__mail {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $button-color;
+  }
+
+  &__text {
+    line-height: 1.2;
+    color: $text-color;
+
+    padding-top: 4.1rem;
+  }
+}

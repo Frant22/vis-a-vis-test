@@ -7,4 +7,15 @@
     width: 37rem;
     padding: 19rem 0 5rem 7rem;
   }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 10rem;
+  }
+
+  &__contacts {
+    width: 27.5rem;
+  }
 }

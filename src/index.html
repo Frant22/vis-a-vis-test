@@ -31,12 +31,14 @@
 
     <main>
       <section class="section firstsection">
-        <h1 class="firstsection__heading">
-          Lorem Ipsum
-          <br>
-          is simply
-        </h1>
-        <div class="firstsection__image"></div>
+        <div class="firstsection__top">
+          <h1 class="firstsection__heading">
+            Lorem Ipsum
+            <br>
+            is simply
+          </h1>
+        </div>
+
         <div class="firstsection__content">
           <div class="firstsection__description">
             <h2 class="firstsection__title">
@@ -136,7 +138,7 @@
 
       </section>
 
-      <section class="section fourthsection" id="page">
+      <section class="section fourthsection" id="fourth">
         <section-cards></section-cards>
         <div class="fourthsection__bottom">
           <p class="fourthsection__item">
@@ -151,14 +153,22 @@
         </div>
       </section>
 
-      <section class="section fifthsection">
+      <section class="section fifthsection" id="fifth">
         <h2 class="fifthsection__heading">
           Lorem Ipsum
           <br>
           is simply dummy text
         </h2>
+
         <div class="fifthsection__content">
-          <div class="fifthsection__form form">
+          <form
+            id="form"
+            class="fifthsection__form form"
+            @submit="checkForm"
+            action="/form-sending"
+            method="post"
+            novalidate="true"
+          >
             <h3 class="form__title">
               It is a long established fact that a reader
             </h3>
@@ -166,6 +176,7 @@
               <input
                 required="1"
                 type="text"
+                v-model="name"
                 id="name"
                 class="form__input input"
               />
@@ -173,49 +184,133 @@
                 Name<span>＊</span>
               </div>
             </label>
+            <p :class="[isNameValid ? 'error__invisible' : 'error']">
+              Lorem Ipsum is simply dummy
+            </p>
 
             <div class="form__contacts">
               <label class="placeinput">
                 <input
                   required="1"
                   type="tel"
+                  v-model="phone"
                   id="phone"
                   class="form__input input"
                 />
                 <div class="place_holder">
                   Phone<span>＊</span>
                 </div>
+                <p :class="[isPhoneValid ? 'error__invisible' : 'error']">
+                  Lorem Ipsum is simply dummy
+                </p>
               </label>
 
               <label class="placeinput">
                 <input
                   required="1"
                   type="email"
+                  v-model="email"
                   id="email"
                   class="form__input input"
                 />
                 <div class="place_holder">
                   E-mail<span>＊</span>
                 </div>
+                <p :class="[isEmailValid ? 'error__invisible' : 'error']">
+                  Lorem Ipsum is simply dummy
+                </p>
               </label>
             </div>
-            <slider>
+
+            <vue-slider v-model="value">
+              <template
+                v-slot:dot>
+                <img class="custom-dot"/>
+              </template>
+            </vue-slider>
+
             <div class="form__confirmation">
-              <input
-                type="radio"
-                id="confirm"
-                value="ok"
-              >
-              <label for="confirm">Lorem Ipsum is simply dummy text</label>
+              <label for="confirm">
+                <input
+                  type="radio"
+                  v-model="confirm"
+                  id="confirm"
+                  value="ok"
+                >
+                &emsp;Lorem Ipsum is simply dummy text
+              </label>
+
               <button class="form__button button">Lorem Ipsum</button>
             </div>
-          </div>
-          <div class="fifthsection__contacts contscts">
-
+          </form>
+          <div class="fifthsection__contacts contacts">
+            <h3 class="contacts__heading">
+              It is a long established fact that a reader
+            </h3>
+            <a href="mailto:support@email.com" class="contacts__mail">
+              support@email.com
+            </a>
+            <p class="contacts__text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by injected humour,
+              or randomised words which don't look even slightly believable.
+              If you are going to use a passage of Lorem Ipsum,
+              you need to be sure there isn't anything embarrassing hidden in the middle of text.
+              All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+              making this the first true generator on the Internet.
+            </p>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__socialmedia socialmedia">
+        <ul class="socialmedia__list">
+          <li class="socialmedia__item">
+            <a href="#" class="link">
+              <img src="images/facebook.svg" alt="facebook-link" class="socialmedia__logo">
+            </a>
+          </li>
+          <li class="socialmedia__item">
+            <a href="#" class="link">
+              <img src="images/instagram.svg" alt="instagram-link" class="socialmedia__logo">
+            </a>
+          </li>
+          <li class="socialmedia__item">
+            <a href="#" class="link">
+              <img src="images/youtube.svg" alt="toutube-link" class="socialmedia__logo">
+            </a>
+          </li>
+          <li class="socialmedia__item">
+            <a href="#" class="link">
+              <img src="images/tweeter.svg" alt="tweeter-link" class="socialmedia__logo">
+            </a>
+          </li>
+        </ul>
+        <div class="footer__label"></div>
+      </div>
+      <div class="footer__lists">
+        <ul class="footer__list list">
+          <li class="footer__item">Lorem</li>
+          <li class="footer__item">Ipsum</li>
+          <li class="footer__item" >Demmy</li>
+          <li class="footer__item">Text</li>
+        </ul>
+        <ul class="footer__list list">
+          <li class="footer__item">Lorem</li>
+          <li class="footer__item">Ipsum</li>
+          <li class="footer__item">Demmy</li>
+          <li class="footer__item">Text</li>
+        </ul>
+        <ul class="footer__list list">
+          <li class="footer__item">Lorem</li>
+          <li class="footer__item">Ipsum</li>
+          <li class="footer__item">Demmy</li>
+          <li class="footer__item">Text</li>
+        </ul>
+      </div>
+    </footer>
     <script src="main.js" defer></script>
   </body>
 </html>

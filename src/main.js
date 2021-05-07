@@ -1,8 +1,13 @@
 /* eslint-disable no-new */
+import VueSlider from 'vue-slider-component';
+import 'vue-slider-component/theme/default.css';
+
 import VueSlickCarousel from 'vue-slick-carousel';
-import Vue from '../vue';
+
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+
+import Vue from '../vue';
 
 const corousel = new Vue({
   el: '#corousel',
@@ -179,4 +184,51 @@ Vue.component('section-cards', {
     </div>`,
 });
 
-new Vue({ el: '#page' });
+new Vue({ el: '#fourth' });
+
+const form = new Vue({
+  el: '#form',
+  data: {
+    name: null,
+    email: null,
+    phone: null,
+    confirm: null,
+    isNameValid: true,
+    isEmailValid: true,
+    isPhoneValid: true,
+    isConfirm: true,
+  },
+  methods: {
+    checkForm(e) {
+      if (!this.name) {
+        this.isNameValid = false;
+      }
+      if (!this.email || !this.validEmail(this.email)) {
+        this.isEmailValid = false;
+      }
+      if (!this.phone || !this.validPhone(this.phone)) {
+        this.isPhoneValid = false;
+      }
+      if (!this.confirm) {
+        this.isConfirm = false;
+      }
+
+      alert('Error');
+
+      e.preventDefault();
+    },
+
+    validEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+
+    validPhone(phone) {
+      const re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+      return re.test(phone);
+    },
+  },
+});
+
+Vue.component('VueSlider', VueSlider);
+new Vue({ el: '#fifth' });
