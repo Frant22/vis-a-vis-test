@@ -192,6 +192,7 @@ const form = new Vue({
     name: null,
     email: null,
     phone: null,
+    value: null,
     confirm: null,
     isNameValid: true,
     isEmailValid: true,
@@ -203,32 +204,205 @@ const form = new Vue({
       if (!this.name) {
         this.isNameValid = false;
       }
-      if (!this.email || !this.validEmail(this.email)) {
+      if (!this.email && !this.validEmail(this.email)) {
         this.isEmailValid = false;
       }
-      if (!this.phone || !this.validPhone(this.phone)) {
+      if (!this.phone && !this.validPhone(this.phone)) {
         this.isPhoneValid = false;
       }
       if (!this.confirm) {
         this.isConfirm = false;
       }
 
-      alert('Error');
+      if (this.isNameValid && this.isEmailValid && this.isPhoneValid && this.isConfirm) {
+        alert('Form has sent!');
+      }
 
       e.preventDefault();
     },
 
     validEmail(email) {
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       return re.test(email);
     },
 
     validPhone(phone) {
-      const re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+      const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
       return re.test(phone);
     },
   },
 });
 
-Vue.component('VueSlider', VueSlider);
-new Vue({ el: '#fifth' });
+const slider = new Vue({
+  el: '#slider',
+  data: {
+    value: 1500,
+    marks: {
+      0: '',
+      500: {
+        label: '500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      1500: {
+        label: '1500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      2500: {
+        label: '2500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      3500: {
+        label: '3500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      4500: {
+        label: '4500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      5500: {
+        label: '5500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      6500: {
+        label: '6500 грн',
+        style: {
+          width: '4px',
+          height: '0.8rem',
+          display: 'block',
+          backgroundColor: '#b4b4b4',
+          transform: 'translate(0, -0.3rem)',
+          borderRadius: '1.2rem',
+        },
+        labelStyle: {
+          color: '#b4b4b4',
+          padding: '0.8rem',
+          fontWeight: 400,
+          fontSize: '1rem',
+        },
+      },
+      7000: '',
+    },
+    options: {
+      railStyle: {
+        backgroundColor: '#b4b4b4',
+      },
+      dotOptions: [{
+        tooltip: 'always',
+        tooltipStyle: {
+          width: '6rem',
+          backgroundColor: '#fff',
+          border: '2px solid #0093E6',
+          borderRadius: '20px',
+          padding: '0.5rem',
+
+          color: '#000',
+          fontSize: '1rem',
+          fontWeight: 400,
+          transform: 'translate(-0.13rem, 0)',
+        },
+        style: {
+          width: '0.6rem',
+          height: '1.2rem',
+          backgroundColor: '#0093E6',
+          borderRadius: '20px',
+          transform: 'translate(0, -0.15rem)',
+        },
+      }],
+    },
+    formatter: '{value} грн',
+  },
+  components: { VueSlider },
+  template:
+    `<div>
+      <vue-slider
+        v-model="value"
+        v-bind="options"
+        :interval="100"
+        :data="data"
+        :marks="marks"
+        :min="0"
+        :max="7000"
+        :process="false"
+        :tooltip-formatter="formatter"
+      ></vue-slider>
+    </div>`,
+});
+

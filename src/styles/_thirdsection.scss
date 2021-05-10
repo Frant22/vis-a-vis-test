@@ -1,0 +1,47 @@
+.thirdsection {
+  padding: 0 11rem;
+
+  &__heading {
+    position: relative;
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: $text-color;
+
+    padding: 11rem 0 7rem;
+
+    &::after {
+      content: '';
+      height: 3px;
+      width: 70rem;
+      background-color: #e5e5e5;
+
+      position: absolute;
+      bottom: 8.5rem;
+      right: 4rem;
+    }
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    width: 90rem;
+
+    padding: 0 0 7.4rem 8.5rem;
+  }
+
+  &__button {
+    position: relative;
+    margin: 0 0 11rem 70rem;
+
+    &::before {
+      content: '';
+      height: 3px;
+      width: 60rem;
+      background-color: #e5e5e5;
+
+      position: absolute;
+      top: 1.5rem;
+      right: 20rem;
+    }
+  }
+}

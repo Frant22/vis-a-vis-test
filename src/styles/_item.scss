@@ -1,0 +1,81 @@
+.item {
+  height: 12rem;
+  width: 15.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__text {
+    font-size: 1.25rem;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  &__icon {
+    animation: changeColor;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    width: 3rem;
+  }
+
+  &__progress {
+    position: relative;
+    display: flex;
+  }
+
+  &__line {
+    height: 2px;
+    background: linear-gradient(to left, #b4b4b4 50%, #0093e6 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 2s ease;
+
+    animation: progress;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+    &--left {
+      position: absolute;
+      width: 14rem;
+      bottom: 0.75rem;
+      left: 1.3rem;
+    }
+
+    &--center {
+      position: absolute;
+      width: 15rem;
+      bottom: 0.22rem;
+      left: 0.5rem;
+    }
+  }
+
+  &__dot {
+    position: relative;
+    animation: changeColor;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    width: 3rem;
+
+    &--last {
+      width: 0.7rem;
+      height: 1rem;
+    }
+  }
+}
+
+
+@keyframes changeColor {
+  0% { filter: brightness(0%); }
+  100% { filter: invert(100%) sepia(50%) saturate(7443%) hue-rotate(198deg) brightness(110%) contrast(112%);}
+}
+
+@keyframes progress {
+  0% {
+    background-position: right bottom;
+  }
+
+  100% {
+    background-position: left bottom;
+  }
+}
