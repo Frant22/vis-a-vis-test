@@ -4,7 +4,6 @@
   "description": "landing for vis-a-vis test task",
   "main": ".src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf ./docs",
     "build": "parcel build --no-minify --out-dir docs --public-url ./ ./src/index.html",
     "start": "parcel serve ./src/index.html --open",

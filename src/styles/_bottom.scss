@@ -4,7 +4,6 @@
 
   &__heading {
     font-size: 1.8rem;
-    color: $text-color;
     font-weight: 700;
 
     width: 23rem;
@@ -34,7 +33,7 @@
     &::before {
       content: '•';
       font-size: 2rem;
-      color: #0093e6;
+      color: $blue-decor-color;
       font-weight: bold;
       display: inline-block;
       position: absolute;

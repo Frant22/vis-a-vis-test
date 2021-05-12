@@ -1,7 +1,11 @@
 .header {
   display: flex;
   gap: 3rem;
-  padding: 1rem 12.2rem;
+  padding: 1vh 0 1vh 12.2rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 131rem;
 
   &__nav {
     list-style: none;

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.b51017b8.css"><link>
+    <link rel="stylesheet" href="main.86683b57.css"><link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script>new WOW().init();</script>
     <title>Vis-a-vis landing</title>
-  <link rel="stylesheet" href="main.ec386670.css"></head>
+  <link rel="stylesheet" href="carousel.4df67a53.css"><link rel="stylesheet" href="form.d72a86da.css"></head>
   <body>
     <header class="header">
       <div class="logo header__logo"></div>
@@ -32,7 +32,7 @@
     </header>
 
     <main>
-      <section class="section firstsection">
+      <section class="firstsection">
         <div class="firstsection__top">
           <h1 class="firstsection__heading">
             Lorem Ipsum
@@ -75,7 +75,7 @@
       <section class="section secondsection">
         <div class="secondsection__top">
           <h2 class="secondsection__heading">Lorem</h2>
-          <div id="corousel" class="corousel"></div>
+          <div id="corousel"></div>
         </div>
         <div class="secondsection__square"></div>
 
@@ -217,7 +217,7 @@
         </button>
       </section>
 
-      <section class="section fourthsection" id="fourth">
+      <section class="fourthsection" id="fourth">
         <section-cards></section-cards>
         <div class="fourthsection__bottom">
           <p class="fourthsection__item">
@@ -240,7 +240,7 @@
         </h2>
 
         <div class="fifthsection__content">
-          <form id="form" class="fifthsection__form form" @submit="checkForm" action="/form-sending" method="POST" novalidate="true">
+          <form id="form" class="fifthsection__form form" @submit.prevent="submitForm" action="/form-sending" method="POST" novalidate="true">
             <h3 class="form__title">
               It is a long established fact that a reader
             </h3>
@@ -270,13 +270,13 @@
                 <div class="place_holder">
                   E-mail<span>＊</span>
                 </div>
-                <p :class="[isPhoneValid ? 'error__invisible' : 'error']">
+                <p :class="[isEmailValid ? 'error__invisible' : 'error']">
                   Lorem Ipsum is simply dummy
                 </p>
               </label>
             </div>
 
-            <div id="slider"></div>
+            <vue-slider v-model="salary" v-bind="options" :interval="100" :data="data" :marks="marks" :min="0" :max="7000" :process="false" :tooltip-formatter="formatter"></vue-slider>
 
             <div class="form__confirmation">
               <label for="confirm">
@@ -287,6 +287,7 @@
               <button class="form__button button">Lorem Ipsum</button>
             </div>
           </form>
+
           <div class="fifthsection__contacts contacts">
             <h3 class="contacts__heading">
               It is a long established fact that a reader
@@ -355,8 +356,8 @@
         </ul>
       </div>
     </footer>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script> -->
-    <script src="main.7359e21d.js" defer=""></script>
+    <script src="main.6866c2d1.js"></script>
+    <script src="carousel.e62aa983.js"></script>
+    <script src="form.eaaf6d42.js"></script>
   </body>
 </html>

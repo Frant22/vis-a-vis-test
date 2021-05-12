@@ -34,7 +34,7 @@
     </header>
 
     <main>
-      <section class="section firstsection">
+      <section class="firstsection">
         <div class="firstsection__top">
           <h1 class="firstsection__heading">
             Lorem Ipsum
@@ -77,7 +77,7 @@
       <section class="section secondsection">
         <div class="secondsection__top">
           <h2 class="secondsection__heading">Lorem</h2>
-          <div id="corousel" class="corousel"></div>
+          <div id="corousel"></div>
         </div>
         <div class="secondsection__square"></div>
 
@@ -317,7 +317,7 @@
         </button>
       </section>
 
-      <section class="section fourthsection" id="fourth">
+      <section class="fourthsection" id="fourth">
         <section-cards></section-cards>
         <div class="fourthsection__bottom">
           <p class="fourthsection__item">
@@ -343,7 +343,7 @@
           <form
             id="form"
             class="fifthsection__form form"
-            @submit="checkForm"
+            @submit.prevent="submitForm"
             action="/form-sending"
             method="POST"
             novalidate="true"
@@ -395,13 +395,23 @@
                 <div class="place_holder">
                   E-mail<span>＊</span>
                 </div>
-                <p :class="[isPhoneValid ? 'error__invisible' : 'error']">
+                <p :class="[isEmailValid ? 'error__invisible' : 'error']">
                   Lorem Ipsum is simply dummy
                 </p>
               </label>
             </div>
 
-            <div id="slider"></div>
+            <vue-slider
+              v-model="salary"
+              v-bind="options"
+              :interval="100"
+              :data="data"
+              :marks="marks"
+              :min="0"
+              :max="7000"
+              :process="false"
+              :tooltip-formatter="formatter"
+            ></vue-slider>
 
             <div class="form__confirmation">
               <label for="confirm">
@@ -417,6 +427,7 @@
               <button class="form__button button">Lorem Ipsum</button>
             </div>
           </form>
+
           <div class="fifthsection__contacts contacts">
             <h3 class="contacts__heading">
               It is a long established fact that a reader
@@ -443,7 +454,11 @@
         <ul class="socialmedia__list">
           <li class="socialmedia__item">
             <a href="#" class="link">
-              <img src="images/facebook.svg" alt="facebook-link" class="socialmedia__logo">
+              <img
+                src="images/facebook.svg"
+                alt="facebook-link"
+                class="socialmedia__logo"
+              >
             </a>
           </li>
           <li class="socialmedia__item">
@@ -497,6 +512,8 @@
         </ul>
       </div>
     </footer>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
+    <script src="carousel.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>

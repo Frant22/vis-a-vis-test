@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  width: 22rem;
+  max-width: 22rem;
   padding: 8rem 0;
 
   &:first-child {
@@ -47,7 +47,6 @@
   &__title {
     font-size: 1.75rem;
     line-height: 2.1rem;
-    color: $text-color;
     font-weight: 700;
 
     padding-bottom: 1.25rem;
@@ -56,7 +55,6 @@
   &__description {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: $text-color;
 
     padding-bottom: 1.25rem;
   }
@@ -70,12 +68,11 @@
     position: relative;
     font-size: 1.1rem;
     line-height: 1.8rem;
-    color: $text-color;
 
     &::before {
       content: '•';
       font-size: 1.5rem;
-      color: #0093e6;
+      color: $blue-decor-color;
       font-weight: bold;
       display: inline-block;
       position: absolute;

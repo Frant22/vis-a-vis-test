@@ -1,21 +1,19 @@
 .slick-slider {
-  width: 71.25rem;
+  max-width: 71.25rem;
 
   .box {
     box-sizing: border-box;
     background-color: white;
-    // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
     
     border-radius: 20px;
 
-    width: 22.5rem !important;
+    max-width: 22.5rem !important;
     height: 29rem;
 
     &__heading {
       font-size: 2.25rem;
       line-height: 0.85;
-      color: $text-color;
-      width: 4rem;
+      max-width: 4rem;
 
       padding: 4.5rem 7.4rem 3rem 8rem;
       align-content: flex-start;
@@ -36,7 +34,7 @@
 
     &__list {
       list-style: none;
-      width: 19rem;
+      max-width: 19rem;
       padding-left: 4rem;
     }
 
@@ -50,8 +48,8 @@
       &::before {
         content: '•';
         font-size: 2rem;
-        color: #0093e6;
-        font-weight: bold;
+        color: $blue-decor-color;
+        font-weight: 700;
         display: inline-block;
         position: absolute;
         left: -2rem;
@@ -93,4 +91,8 @@
 
 .slick-dots {
   bottom: -3rem !important;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
 }
