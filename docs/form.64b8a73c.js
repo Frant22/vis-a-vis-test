@@ -20561,31 +20561,32 @@ new _vue.default({
         this.isNameValid = false;
       } else {
         this.isNameValid = true;
-        this.name = null;
       }
 
       if (!this.email && !this.emailValidator(this.email)) {
         this.isEmailValid = false;
       } else {
         this.isEmailValid = true;
-        this.email = null;
       }
 
       if (!this.phone && !this.phoneValidator(this.phone)) {
         this.isPhoneValid = false;
       } else {
         this.isPhoneValid = true;
-        this.phone = null;
       }
 
       if (!this.confirm) {
         this.isConfirm = false;
       } else {
         this.isConfirm = true;
-        this.confirm = null;
       }
 
       if (this.isNameValid && this.isEmailValid && this.isPhoneValid && this.isConfirm) {
+        this.name = null;
+        this.email = null;
+        this.phone = null;
+        this.confirm = null;
+        this.salary = 2500;
         alert('Form has sent!');
       }
 
@@ -20605,4 +20606,4 @@ new _vue.default({
   }
 });
 },{"vue-slider-component":"SdYw","vue-slider-component/theme/default.css":"ZSN6","../vue":"fcxb"}]},{},["Xk9z"], null)
-//# sourceMappingURL=form.eaaf6d42.js.map
+//# sourceMappingURL=form.64b8a73c.js.map

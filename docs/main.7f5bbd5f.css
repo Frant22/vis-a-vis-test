@@ -28,6 +28,10 @@ p {
   box-sizing: border-box;
 }
 
+.body {
+  overflow-x: hidden;
+}
+
 .link {
   text-decoration: none;
 }
@@ -836,4 +840,4 @@ p {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=main.86683b57.css.map */
+/*# sourceMappingURL=main.7f5bbd5f.css.map */
